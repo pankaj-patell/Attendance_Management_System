@@ -1,0 +1,21 @@
+<?php 
+   session_start();
+   $e=$_REQUEST['e'];
+   $p=$_REQUEST['p'];
+   
+   $con = mysqli_connect("localhost","root","","Attendance_Management_System");
+
+   $q="SELECT * FROM `login`where email='$e' and password='$p' ";
+       $r= mysqli_query($con,$q);
+
+       if($row=mysqli_fetch_array($r))
+       {
+         $_session['email']=$e;
+         $_sesion['name']=$row['name'];
+              header('location:index.php');
+
+       }
+       else{
+        echo "not matched";
+       }
+?>
