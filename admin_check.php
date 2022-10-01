@@ -10,8 +10,8 @@
 
        if($row=mysqli_fetch_array($r))
        {
-         $_session['email']=$e;
-         $_sesion['name']=$row['name'];
+         $_SESSION['email']=$e;
+         $_SESSION['name']=$row['name'];
               header('location:index.php');
 
        }

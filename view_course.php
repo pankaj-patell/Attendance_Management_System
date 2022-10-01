@@ -1,6 +1,6 @@
 <?php 
        include "header.php";
-       include "sidebar.php";
+       include "admin_sidebar.php";
        ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -14,7 +14,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Courses</a></li>
               <li class="breadcrumb-item active">DataTables</li>
             </ol>
           </div>
@@ -33,33 +33,43 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example2" class="table table-bordered table-hover">
-                  <thead>
-                  <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td>X</td>
-                  </tr>
-                  
+              <table id="example1" class="table table-bordered table-hover">
+<thead>
+<tr>
+  <th>Sr.no</th>
+  <th>Course Name</th>
+  <th>Edit</th>
+  <th>Delete</th>
+</tr>
+</thead>
+<tbody>
+<?php
+  $i=1;
+  include "config.php";
+  $query="select * from `course`";
+  $res=mysqli_query($con,$query);
+  while($data=mysqli_fetch_array($res)){
+?>
+<tr>
+  <td><?php echo $i; ?></td>
+  <td><?php echo $data['course_name']; ?></td>
+  <td><a class="btn btn-primary" href="edit_course.php?id=<?php echo $data['course_name']; ?>">Edit</a></td>
+  <td><a class="btn btn-danger
+  "  href="delete_course.php?id=<?php echo $data['id']; ?>">Delete</a></td>
+</tr>
+<?php 
+  $i++;
+  }
+?>
+
+</tbody>
 </table>
-                  </div>
-                  </div>
-                </div>
-             </div>
-     </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
 
 
 <?php include "footer.php";

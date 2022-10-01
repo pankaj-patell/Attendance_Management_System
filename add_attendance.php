@@ -8,12 +8,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Student</h1>
+            <h1>Student Attendance</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Teacher</li>
+              <li class="breadcrumb-item active">Student Attendance</li>
             </ol>
           </div>
         </div>
@@ -34,27 +34,27 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              	<form method="post" action="teacher_insert.php" enctype="multipart/form-data">
+              	<form method="post" action="attendance_insert.php" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Teacher Name</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter  Name" name="n">
+                    <label for="exampleInputEmail1">course id</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="course id" name="i">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">E-mail</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter E-mail" name="e">
+                    <label for="exampleInputEmail1">student id</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="student id" name="s">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Password</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Password" name="p">
+                    <label for="exampleInputEmail1">student name </label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="student name" name="n">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Course</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Course" name="c">
+                    <label for="exampleInputEmail1">attendance</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="attendance" name="a">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Address</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Address" name="a">
+                    <label for="exampleInputEmail1">teacher id</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="teacher id" name="t">
                   </div>
                  
 

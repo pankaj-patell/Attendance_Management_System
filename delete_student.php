@@ -1,21 +1,19 @@
 <?php
 	//get values from form
-	$n  = $_REQUEST['c'];
+	$id  = $_REQUEST['id'];
 	
 
 	include "config.php";
 
 	//table with query
-	$query = "insert into `course`(`course_name`)values('$n')";
+	$query = "delete from `student` where id='$id'";
 
 	//combine database with table
 	$result = mysqli_query($con,$query);
 
 	if($result>0)
 	{
-		//echo "inserted";
-		move_uploaded_file($ft,"upload/".$fn);
-		header("location:course.php");
+		header("location:view_student.php");
 	}
 	else{
 		//echo "not inserted";
