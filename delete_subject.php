@@ -13,7 +13,10 @@
 
 	if($result>0)
 	{
-		header("location:view_subject.php");
+		echo "<script>window.location.assign('view_subject.php')</script>";
+		
+		
+	
 	}
 	else{
 		//echo "not inserted";

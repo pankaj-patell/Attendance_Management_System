@@ -41,15 +41,21 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" id="remember">
-              <label for="remember">
-                Remember Me
-              </label>
+        <div class="input-group mb-3">
+          <select class="form-control" placeholder="Password" name='t'>
+          <option disabled selected>Select Type</option>
+          <option>Admin</option>
+          <option>Teacher</option> 
+          <option>Student</option> 
+</select>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              
             </div>
           </div>
+        </div>
+        <div class="row">
+          
           <!-- /.col -->
           <div class="col-4">
             <button type="submit" class="btn btn-primary btn-block">Sign In</button>

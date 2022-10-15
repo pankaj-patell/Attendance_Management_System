@@ -3,7 +3,7 @@
    $e=$_REQUEST['e'];
    $p=$_REQUEST['p'];
    
-   $con = mysqli_connect("localhost","root","","Attendance_Management_System");
+   include"config.php";
 
    $q="SELECT * FROM `login`where email='$e' and password='$p' ";
        $r= mysqli_query($con,$q);
@@ -12,7 +12,8 @@
        {
          $_SESSION['email']=$e;
          $_SESSION['name']=$row['name'];
-              header('location:index.php');
+         echo "<script>window.location.assign('index.php')</script>";
+
 
        }
        else{

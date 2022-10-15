@@ -1,1 +1,1 @@
-<?php echo "<script>window.location.assing('login.php')</script>"; ?>
+<?php echo "<script>window.location.assign('login.php')</script>"; ?>

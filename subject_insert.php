@@ -19,7 +19,7 @@
 	{
 		//echo "inserted";
 		move_uploaded_file($ft,"upload/".$fn);
-		header("location:add_subject.php");
+		echo "<script>window.location.assign('add_subject.php')</script>";
 	}
 	else{
 		//echo "not inserted";

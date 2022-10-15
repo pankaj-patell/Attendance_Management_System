@@ -10,7 +10,7 @@
 
 	//database
 	//(hostname,username,password, db name)
-	$con = mysqli_connect("localhost","root","","attendance_management_system");
+	include "config.php";
 
 	//table with query
 	$query = "insert into `teacher`(`name`,`email`,`password`,`course`,`Address`)values('$n','$e','$p','$c','$a')";
@@ -22,7 +22,7 @@
 	{
 		//echo "inserted";
 		move_uploaded_file($ft,"upload/".$fn);
-		header("location:add_teacher.php");
+		echo "<script>window.location.assign('add_teacher.php')</script>";
 	}
 	else{
 		//echo "not inserted";

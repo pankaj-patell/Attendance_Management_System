@@ -22,7 +22,7 @@
 	{
 		//echo "inserted";
 		move_uploaded_file($ft,"upload/".$fn);
-		header("location:add_attendance.php");
+		echo "<script>window.location.assign('add_attendence.php')</script>";
 	}
 	else{
 		//echo "not inserted";

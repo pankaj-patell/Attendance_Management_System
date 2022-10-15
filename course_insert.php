@@ -15,7 +15,7 @@
 	{
 		//echo "inserted";
 		move_uploaded_file($ft,"upload/".$fn);
-		header("location:course.php");
+		echo "<script>window.location.assign('course.php')</script>";
 	}
 	else{
 		//echo "not inserted";
