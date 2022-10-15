@@ -12,7 +12,7 @@
        {
          $_SESSION['email']=$e;
          $_SESSION['name']=$row['name'];
-              header('location:index.php');
+       header('location:index.php');
 
        }
        else{

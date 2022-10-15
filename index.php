@@ -1,3 +1,1 @@
-<?php include "header.php"; ?>
-<?php include "admin_sidebar.php"; ?>
-<?php include "footer.php"; ?>
+<?php echo "<script>window.location.assing('login.php')</script>"; ?>
