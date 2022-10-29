@@ -7,9 +7,8 @@
    include "config.php";
   if($t=='Admin')
   {
-    $q="SELECT * FROM `Admin`where email='$e' and password='$p' ";
+    $q="SELECT * FROM `login`where email='$e' and password='$p' ";
     $r= mysqli_query($con,$q);
-
     if($row=mysqli_fetch_array($r))
     {
       $_SESSION['email']=$e;

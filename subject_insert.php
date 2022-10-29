@@ -7,7 +7,8 @@
 
 	//database
 	//(hostname,username,password, db name)
-	$con = mysqli_connect("localhost","root","","attendance_management_system");
+	
+	include "config.php";
 
 	//table with query
 	$query = "insert into `subject`(`subject_name`,`subject_code`,`course_id`)values('$n','$c','$i')";

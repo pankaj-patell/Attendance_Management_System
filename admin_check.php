@@ -13,8 +13,6 @@
          $_SESSION['email']=$e;
          $_SESSION['name']=$row['name'];
          echo "<script>window.location.assign('index.php')</script>";
-
-
        }
        else{
         echo "not matched";

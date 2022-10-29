@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -14,8 +14,8 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition login-page">
-<div class="login-box">
+ <body class="hold-transition login-page">
+ <div class="login-box">
   <div class="login-logo">
     <a href="../../index2.html"><b>Login</b>Page</a>
   </div>

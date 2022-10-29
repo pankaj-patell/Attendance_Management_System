@@ -14,10 +14,7 @@
 	if($result>0)
 	{
 		echo "<script>window.location.assign('view_subject.php')</script>";
-		
-		
-	
-	}
+		}
 	else{
 		//echo "not inserted";
 		echo mysqli_error($con);
