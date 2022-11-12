@@ -1,6 +1,6 @@
 <?php 
        include "header.php";
-       include "sidebar.php";
+       include "admin_sidebar.php";
        ?>
 
 <!-- Content Wrapper. Contains page content -->

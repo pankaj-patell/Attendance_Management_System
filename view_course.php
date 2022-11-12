@@ -59,7 +59,7 @@
 <tr>
   <td><?php echo $i; ?></td>
   <td><?php echo $data['course_name']; ?></td>
-  <td><a class="btn btn-primary" href="edit_course.php?id=<?php echo $data['course_name']; ?>">Edit</a></td>
+  <td><a class="btn btn-primary" href="edit_course.php?id=<?php echo $data['id']; ?>">Edit</a></td>
   <td><a class="btn btn-danger
   "  href="delete_course.php?id=<?php echo $data['id']; ?>">Delete</a></td>
 </tr>

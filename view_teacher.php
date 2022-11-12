@@ -1,6 +1,6 @@
 <?php 
        include "header.php";
-       include "sidebar.php";
+       include "admin_sidebar.php";
        ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -10,7 +10,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>View Teacher's</h1>
+            <h1>View Teachers</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -35,7 +35,7 @@
             ?> 
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Teacher's</h3>
+                <h3 class="card-title">Teachers</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">

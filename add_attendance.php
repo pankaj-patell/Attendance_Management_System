@@ -1,6 +1,6 @@
 <?php 
      include "header.php";
-     include "sidebar.php";
+     include "teacher_sidebar.php";
 ?>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
