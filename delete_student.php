@@ -13,10 +13,12 @@
 
 	if($result>0)
 	{
-		echo "<script>window.location.assign('view_student.php')</script>";
+		echo "<script>window.location.assign('view_student.php?msg=Data Deleted')</script>";
 	}
 	else{
 		//echo "not inserted";
 		echo mysqli_error($con);
+		echo "<script>window.location.assign('view_student.php?msg=Data not Deleted')</script>";
+
 	}
 ?>

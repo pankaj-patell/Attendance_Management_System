@@ -20,10 +20,12 @@
 	{
 		//echo "inserted";
 		move_uploaded_file($ft,"upload/".$fn);
-		echo "<script>window.location.assign('add_subject.php')</script>";
+		echo "<script>window.location.assign('add_subject.php?msg=Data Inserted')</script>";
 	}
 	else{
 		//echo "not inserted";
 		echo mysqli_error($con);
+		echo "<script>window.location.assign('add_subject.php?msg=Data not Inserted')</script>";
+
 	}
 ?>

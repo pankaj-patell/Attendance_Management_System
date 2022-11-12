@@ -27,13 +27,19 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
+          <?php
+              if(isset($_REQUEST['msg']))
+              {
+                echo "<div class='alert alert-info text-center'>".$_REQUEST['msg']."</div>";
+              }
+            ?> 
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Teacher's</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example2" class="table table-bordered table-hover">
+                <table id="example1" class="table table-bordered table-hover">
                   <thead>
                   <tr>
                     <th>Sr.no</th>
@@ -52,7 +58,9 @@
                   <?php
   $i=1;
   include "config.php";
-  $query="select * from `teacher`";
+  $query="select teacher.*,course.course_name from `teacher`
+  INNER JOIN course
+  ON teacher.Course=course.id";
   $res=mysqli_query($con,$query);
   while($data=mysqli_fetch_array($res)){
 ?>
@@ -61,7 +69,7 @@
   <td><?php echo $data['name']; ?></td>
   <td><?php echo $data['email']; ?></td>
   <td><?php echo $data['password']; ?></td>
-  <td><?php echo $data['Course']; ?></td>
+  <td><?php echo $data['course_name']; ?></td>
   <td><?php echo $data['Address']; ?></td>
   <td><a class="btn btn-primary" href="edit_teacher.php?id=<?php echo $data['id']; ?>">Edit</a></td>
   <td><a class="btn btn-danger

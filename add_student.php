@@ -1,6 +1,6 @@
 <?php 
      include "header.php";
-     include "sidebar.php";
+     include "admin_sidebar.php";
 ?>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -24,9 +24,15 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row mt-5">
           <!-- left column -->
-          <div class="col-md-6">
+          <div class="offset-md-3 col-md-6">
+          <?php
+              if(isset($_REQUEST['msg']))
+              {
+                echo "<div class='alert alert-info text-center'>".$_REQUEST['msg']."</div>";
+              }
+            ?> 
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
@@ -58,7 +64,16 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Course id</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Address" name="i">
+                    <select class="form-control" id="exampleInputEmail1" placeholder="Enter Course id" name="i">
+                      <option disabled selected>Select Course</option>
+                      <?php
+                          include "config.php";
+                          $q=mysqli_query($con,"select * from `course`");
+                          while($data=mysqli_fetch_array($q)){
+                      ?>
+                      <option value="<?php echo $data['id'];?>"><?php echo $data['course_name'];?></option>
+                      <?php }?>
+                    </select>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Roll no.</label>

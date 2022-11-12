@@ -15,10 +15,12 @@
 	{
 		//echo "inserted";
 		move_uploaded_file($ft,"upload/".$fn);
-		echo "<script>window.location.assign('course.php')</script>";
+		echo "<script>window.location.assign('add_course.php?msg=Data Inserted')</script>";
 	}
 	else{
 		//echo "not inserted";
 		echo mysqli_error($con);
+		echo "<script>window.location.assign('add_course.php?msg=Data not Inserted')</script>";
+
 	}
 ?>

@@ -27,6 +27,12 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
+          <?php
+              if(isset($_REQUEST['msg']))
+              {
+                echo "<div class='alert alert-info text-center'>".$_REQUEST['msg']."</div>";
+              }
+            ?> 
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Entered Course</h3>

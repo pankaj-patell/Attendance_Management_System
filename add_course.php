@@ -1,6 +1,6 @@
 <?php 
      include "header.php";
-     include "sidebar.php";
+     include "admin_sidebar.php";
 ?>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -24,9 +24,15 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row mt-5">
           <!-- left column -->
-          <div class="col-md-6">
+          <div class="offset-md-3 col-md-6">
+            <?php
+              if(isset($_REQUEST['msg']))
+              {
+                echo "<div class='alert alert-info text-center'>".$_REQUEST['msg']."</div>";
+              }
+            ?>  
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
