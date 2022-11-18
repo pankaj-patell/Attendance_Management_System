@@ -23,7 +23,12 @@
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in </p>
-
+      <?php
+              if(isset($_REQUEST['msg']))
+              {
+                echo "<div class='alert alert-danger text-center'>".$_REQUEST['msg']."</div>";
+              }
+            ?> 
       <form action="check.php" method="post">
         <div class="input-group mb-3">
           <input type="email" class="form-control" placeholder="Email" name= 'e'>
@@ -47,7 +52,7 @@
           <option>Admin</option>
           <option>Teacher</option> 
           <option>Student</option> 
-</select>
+        </select>
           <div class="input-group-append">
             <div class="input-group-text">
               
@@ -63,9 +68,6 @@
           <!-- /.col -->
         </div>
       </form>
-      <p class="mb-1">
-        <a href="forgot-password.html">I forgot my password</a>
-      </p>
   </div>
 </div>
 <!-- /.login-box -->

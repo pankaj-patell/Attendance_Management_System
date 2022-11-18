@@ -13,11 +13,13 @@
     {
       $_SESSION['email']=$e;
       $_SESSION['name']=$row['name'];
+      $_SESSION['id']=$row['id'];
       echo "<script>window.location.assign('admin_index.php')</script>";
 
     }
     else{
-     echo "not matched";
+      echo "<script>window.location.assign('login.php?msg=Wrong Credentials')</script>";
+
     }
   }
   else if($t=='Teacher')
@@ -29,11 +31,13 @@
     {
       $_SESSION['email']=$e;
       $_SESSION['name']=$row['name'];
+      $_SESSION['id']=$row['id'];
       echo "<script>window.location.assign('teacher_index.php')</script>";
 
     }
     else{
-     echo "not matched";
+      echo "<script>window.location.assign('login.php?msg=Wrong Credentials')</script>";
+
     }
   }
   else if($t=='Student')
@@ -44,12 +48,14 @@
     if($row=mysqli_fetch_array($r))
     {
       $_SESSION['email']=$e;
-      $_SESSION['name']=$row['name'];
+      $_SESSION['name']=$row['student_name'];
+      $_SESSION['id']=$row['id'];
       echo "<script>window.location.assign('student_index.php')</script>";
 
     }
     else{
-     echo "not matched";
+      echo "<script>window.location.assign('login.php?msg=Wrong Credentials')</script>";
+     
     }
   }
    ?>

@@ -5,7 +5,11 @@
 <?php
   $i=1;
   include "config.php";
-  $query="select * from `student`";
+  $id=$_SESSION['id'];
+  $query="select student.*,course.course_name from `student`
+  INNER JOIN `course`
+  ON student.course_id=course.id
+   where student.id = '$id'";
   $res=mysqli_query($con,$query);
   $data=mysqli_fetch_array($res);
 ?>
@@ -32,20 +36,21 @@
 <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-3">
+          <div class="offset-md-3 col-md-5">
 
             <!-- Profile Image -->
             <div class="card card-primary card-outline">
               <div class="card-body box-profile">
                 <div class="text-center">
-                  <img class="profile-user-img img-fluid img-square"
+                  <img class="profile-user-img img-fluid img-square rounded-circle"
                        src="image/ak.jpg.jpg?>"
                        alt="User profile picture">
                 </div>
-               <td><?php echo $data['student_name']; ?></td>
-               <br>
-                <td><?php echo $data['roll_no']; ?></td>
-                
+                <div class="row">
+               <div class="col-md-6"><p class="text-right mt-1">Name:</p></div>  <div class="col-md-6"><p class="text-left mt-1"><?php echo $data['student_name']; ?></p></div>
+            
+               <div class="col-md-6"><p class="text-right mt-1">Roll Number:</p></div> <div class="col-md-6"> <p class="text-left mt-1"><?php echo $data['roll_no']; ?></p></div>
+</div>
        </div>
               <!-- /.card-body -->
             </div>
@@ -58,24 +63,24 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <strong><i class="fas fa-book mr-1"></i> Course ID</strong>
+                <strong><i class="fas fa-book mr-1"></i> Course: </strong>
 
-                <td><?php echo $data['course_id']; ?></td>
+                <td><?php echo $data['course_name']; ?></td>
 
                 <hr>
 
-                <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
+                <strong><i class="fas fa-map-marker-alt mr-1"></i> Location:</strong>
 
                 <td><?php echo $data['address']; ?></td>
 
                 <hr>
-                <strong><i class="fa fa-phone mr-1"></i> Contact</strong>
+                <strong><i class="fa fa-phone mr-1"></i> Contact:</strong>
 
               <td><?php echo $data['contact']; ?></td>
               
                 <hr>
 
-                <strong><i class="far fa-file-alt mr-1"></i> ID</strong>
+                <strong><i class="far fa-file-alt mr-1"></i> E-mail:</strong>
                 <td><?php echo $data['email']; ?></td>
                 
               </div>

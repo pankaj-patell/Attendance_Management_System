@@ -1,31 +1,28 @@
 <?php
-	//get values from form
-	$i = $_REQUEST['i'];
-	$s = $_REQUEST['s'];
-	$n = $_REQUEST['n'];
-    $a = $_REQUEST['a'];
-	$t = $_REQUEST['t'];
-
+session_start();
+$tid=$_SESSION['id'];
+$course=$_REQUEST['c'];
+$subject=$_REQUEST['s'];
+$name=$_REQUEST['name'];
+$roll_no=$_REQUEST['roll'];
+$a=$_REQUEST['a'];
+$id=$_REQUEST['id'];
+$date = date("m/d/Y");
+include"config.php";
+$count=count($name);
+for($i=0;$i<$count;$i++)
+{
+$q="insert into`attendance`(`course_id`,`subject_id`,`student_id`,`roll_no`,`student_name`,`attendance`,`teacher_id`,`date`) values('$course','$subject','$id[$i]','$roll_no[$i]','$name[$i]','$a[$i]','$tid','$date')";
+$result=mysqli_query($con,$q);
+if($result>0)
+{
 	
+	echo"<script>window.location.assign('add_attendance.php?msg=Data Saved')</script>";
+}
+else
+{
+	echo"<script>window.location.assign('add_attendance.php?msg=Data not Saved')</script>";
 
-	//database
-	//(hostname,username,password, db name)
-	$con = mysqli_connect("localhost","root","","attendance_management_system");
-
-	//table with query
-	$query = "insert into `attendance`(`course_id`,`student_id`,`student_name`,`attendance`,`teacher_id`)values('$i','$s','$n','$a','$t')";
-
-	//combine database with table
-	$result = mysqli_query($con,$query);
-
-	if($result>0)
-	{
-		//echo "inserted";
-		move_uploaded_file($ft,"upload/".$fn);
-		echo "<script>window.location.assign('add_attendence.php')</script>";
-	}
-	else{
-		//echo "not inserted";
-		echo mysqli_error($con);
-	}
+}
+}
 ?>

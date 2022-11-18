@@ -10,6 +10,8 @@
 
 <!-- REQUIRED SCRIPTS -->
 <!-- jQuery -->
+<script src="fetch_subject.js"></script>
+<script src="fetch_student.js"></script>
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
