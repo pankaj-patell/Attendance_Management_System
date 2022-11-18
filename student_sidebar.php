@@ -30,60 +30,21 @@
           </li>
           
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="student_attendance.php" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Attendance
-                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="course.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>View</p>
-                </a>
-              </li>
-            </ul>  
           
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tree"></i>
+            <a href="student_profile.php" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
               <p>
                 Profile
-                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="student_profile.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                  <p>View</p>
-                </a>
-              </li>
-</ul>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
-              <p>
-                Contact
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/forms/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>View</p>
-                </a>
-              </li>
-              
+          </li>          
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
