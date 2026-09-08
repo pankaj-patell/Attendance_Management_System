@@ -93,16 +93,6 @@ The full schema, along with sample data, is provided in `attendance_management_s
    - Visit `http://localhost/Attendance_Management_System/` in your browser.
    - You'll be redirected to the login page.
 
-### Default Admin Login
-
-| Field    | Value              |
-|----------|--------------------|
-| Email    | `admin@gmail.com`  |
-| Password | `12345`            |
-| Role     | `Admin`            |
-
-> ⚠️ These are sample credentials from the seed data. Change them before deploying anywhere beyond local development.
-
 ## Usage
 
 1. Log in with the appropriate role (Admin, Teacher, or Student).
